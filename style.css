@@ -1,44 +1,49 @@
- {
+/* Container styles */
+{
     display: flex;
     justify-content: space-around;
-    width: 90%; 
+    width: 90%;
     margin: 30px auto;
 }
 
+/* Common div styles */
 div {
-    padding: 20px; 
-    border-style: double; 
-    border-width: 8px; 
-    text-align: center; 
-    font-family: 'Verdana', sans-serif; 
-    border-radius: 10px; 
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); 
-    box-sizing: border-box; 
+    padding: 20px;
+    border-style: double;
+    border-width: 8px; /* Changed from 'border-grow' - assuming you meant border width */
+    text-align: center;
+    font-family: 'Verdana', sans-serif;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
 
     /* Flexbox properties */
-    flex-grow: 1;
+    flex-grow: 1; /* Retained flex-grow, which might be what you meant by 'grow' */
     margin: 0 10px;
 }
 
-#vung1 { 
-    border-color: black; 
-    background-color: green; 
+/* Specific IDs styles */
+#vung1 {
+    border-color: black;
+    background-color: green;
 }
 
-#vung2 { 
-    border-color: black; 
-    background-color: blue; 
+#vung2 {
+    border-color: black;
+    background-color: blue;
 }
 
-#vung3 { 
-    border-color: black; 
-    background-color: orange; 
+#vung3 {
+    border-color: black;
+    background-color: orange;
 }
 
-.vung-image { 
-    max-width: 90%; 
-    height: auto; 
-    margin-top: 15px; 
-    border: 3px dotted; 
+/* Image styles */
+.vung-image {
+    max-width: 90%;
+    height: auto;
+    margin-top: 15px;
+    border: 3px dotted;
     border-radius: 5px;
 }
+
