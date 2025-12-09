@@ -10,19 +10,17 @@
 div {
     padding: 20px;
     border-style: double;
-    border-width: 8px; /* Changed from 'border-grow' - assuming you meant border width */
+    border-width: 8px;
     text-align: center;
     font-family: 'Verdana', sans-serif;
     border-radius: 10px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     box-sizing: border-box;
 
-    /* Flexbox properties */
-    flex-grow: 1; /* Retained flex-grow, which might be what you meant by 'grow' */
+    flex-grow: 1;
     margin: 0 10px;
 }
 
-/* Specific IDs styles */
 #vung1 {
     border-color: black;
     background-color: green;
@@ -30,7 +28,7 @@ div {
 
 #vung2 {
     border-color: black;
-    background-color: blue;
+    background-color: white;
 }
 
 #vung3 {
@@ -38,7 +36,6 @@ div {
     background-color: orange;
 }
 
-/* Image styles */
 .vung-image {
     max-width: 90%;
     height: auto;
@@ -46,4 +43,5 @@ div {
     border: 3px dotted;
     border-radius: 5px;
 }
+
 
