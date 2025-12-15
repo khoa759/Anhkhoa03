@@ -1,75 +1,17 @@
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <title>Home HTML</title>
-    <link rel="stylesheet" href="style.css"> 
-</head>
-<body>
-    <div id="vung1">
-        <div class="nav-links"> 
-            <a href="#">Trang chủ</a>
-            <a href="#">Thông tin</a>
-            <a href="#">Dịch vụ</a>
-        </div>
-        <img src="8d3ebb202363ac3df572.jpg" alt="Ảnh nền" width="30"> 
-    </div>
+<h2>CSS Template using Float</h2>
+<p>In this example, we have created a header, three equal columns and a footer. On smaller screens, the columns will stack on top of each other.</p>
+<p>Resize the browser window to see the responsive effect.</p>
 
-    <div id="vung2">
-        <p>Vùng nội dung</p>
-        <h2>Bảng Điểm Môn Học</h2>
-        <img src="2542751390276494061.jpg" alt="Bảng điểm môn học của học sinh" style="max-width: 100%; height: auto; border: 1px solid #ddd;">
-        <p>Một số nội dung</p> 
-        </div>
-    
- <div id="vung2">
-        <h2>📝 Biểu mẫu Đăng ký Thông tin</h2>
-        <form action="/submit-form" method="POST">
-            
-            <div class="form-group">
-                <label for="ten">Tên:</label>
-                <input type="text" id="ten" name="ten" required>
-            </div>
-            
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            
-            <div class="form-group">
-                <label for="quocgia">Quốc gia:</label>
-                <select id="quocgia" name="quocgia">
-                    <option value="vietnam">Việt Nam</option>
-                    <option value="usa">Hoa Kỳ</option>
-                    <option value="japan">Nhật Bản</option>
-                    <option value="khac">Khác</option>
-                </select>
-            </div>
-            
-            <div class="form-group-checkbox">
-                <p>Sở Thích:</p>
-                <input type="checkbox" id="doc_sach" name="so_thich[]" value="doc_sach">
-                <label for="doc_sach">Đọc sách</label>
-                
-                <input type="checkbox" id="nghe_nhac" name="so_thich[]" value="nghe_nhac">
-                <label for="nghe_nhac">Nghe nhạc</label>
-            </div>
-            
-            <hr>
-            
-            <div class="form-actions">
-                <button type="submit">Đăng nhập</button>
-                <button type="reset">Thoát</button>
-            </div>
-            
-        </form>
-    </div>
+<div class="header">
+  <h2>Header</h2>
+</div>
 
-   <div id="vung3">
-        <div class="vung_con">
-            <p>Vùng chân trang / Footer</p>
-            <p>Nội dung chân trang</p>
-        </div>
-    </div>
-</body>
-</html>
+<div class="row">
+  <div class="column" style="background-color:#aaa;">Column</div>
+  <div class="column" style="background-color:#bbb;">Column</div>
+  <div class="column" style="background-color:#ccc;">Column</div>
+</div>
+
+<div class="footer">
+  <p>Footer</p>
+</div>
