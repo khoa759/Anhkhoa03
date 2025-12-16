@@ -1,40 +1,61 @@
-/* Thiết lập cơ bản cho toàn bộ trang */
+/*
+   FILE: style.css
+   Mục đích: Tạo giao diện sidenav cố định (fixed) và full-height.
+*/
+
+/* --- 1. Thiết lập cơ bản --- */
 body {
     margin: 0; /* Xóa margin mặc định */
     font-family: Arial, sans-serif;
-    background-color: white;
+    line-height: 1.5; /* Điều chỉnh khoảng cách dòng */
 }
 
-/* Kiểu cho Sidebar (sidenav) */
+/* --- 2. Định dạng cho Thanh Điều hướng Bên (Sidenav) --- */
 .sidenav {
     height: 100%; /* Chiều cao đầy đủ của viewport */
     width: 200px; /* Chiều rộng cố định */
-    position: fixed; /* Rất quan trọng: Cố định vị trí */
+    position: fixed; /* Cố định vị trí, không cuộn theo trang */
     z-index: 1; 
     top: 0; 
     left: 0; 
-    background-color: #111; /* Màu nền đen */
+    background-color: #000; /* Màu nền đen tuyệt đối */
     overflow-x: hidden; 
-    padding-top: 20px;
+    padding-top: 20px; /* Khoảng đệm trên */
+    box-sizing: border-box; 
 }
 
-/* Kiểu cho các liên kết trong sidebar */
+/* Định dạng cho các liên kết (Link) trong sidenav */
 .sidenav a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 18px;
-    color: white; /* Màu chữ trắng */
+    /* Điều chỉnh padding để giống với ảnh: khoảng đệm trên/dưới lớn hơn */
+    padding: 15px 16px; 
+    text-decoration: none; 
+    font-size: 18px; 
+    color: #f1f1f1; /* Màu chữ trắng/sáng */
     display: block; 
+    transition: 0.3s;
 }
 
-/* Kiểu cho Nội dung chính (main) */
-.main {
-    /* Rất quan trọng: Tạo khoảng trống bên trái bằng chiều rộng của sidebar */
-    margin-left: 200px; 
-    padding: 1px 16px;
+/* Hiệu ứng hover cho các liên kết */
+.sidenav a:hover {
+    color: #fff;
+    /* Có thể thêm background-color: #333; nếu muốn hiệu ứng hover màu nền */
 }
 
-/* Kiểu cho tiêu đề (tùy chọn) */
-.main h1 {
-    font-size: 36px;
+/* --- 3. Định dạng cho Khu vực Nội dung Chính (Content) --- */
+.content {
+    /* Đẩy nội dung chính sang phải bằng với chiều rộng của sidenav */
+    margin-left: 200px;
+    padding: 1px 20px; /* Khoảng đệm xung quanh nội dung */
+}
+
+/* Định dạng cho tiêu đề và đoạn văn trong nội dung */
+.content h2 {
+    color: #333; 
+    font-size: 32px; /* Điều chỉnh kích thước tiêu đề */
+    margin-top: 40px; /* Khoảng cách từ đỉnh trang */
+}
+
+.content p {
+    color: #555;
+    font-size: 16px;
 }
