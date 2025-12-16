@@ -1,172 +1,61 @@
-{
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
-  padding: 0;
-}
+/*
+   FILE: style.css
+   Mục đích: Tạo giao diện sidenav cố định (fixed) và full-height.
+*/
 
+/* --- 1. Thiết lập cơ bản --- */
 body {
-  margin: 0;
+    margin: 0; /* Xóa margin mặc định */
+    font-family: Arial, sans-serif;
+    line-height: 1.5; /* Điều chỉnh khoảng cách dòng */
 }
 
-.header {
-  background-color: LightGray; 
-  padding: 20px;
-  text-align: center;
-  margin-bottom: 10px;
+/* --- 2. Định dạng cho Thanh Điều hướng Bên (Sidenav) --- */
+.sidenav {
+    height: 100%; /* Chiều cao đầy đủ của viewport */
+    width: 200px; /* Chiều rộng cố định */
+    position: fixed; /* Cố định vị trí, không cuộn theo trang */
+    z-index: 1; 
+    top: 0; 
+    left: 0; 
+    background-color: #000; /* Màu nền đen tuyệt đối */
+    overflow-x: hidden; 
+    padding-top: 20px; /* Khoảng đệm trên */
+    box-sizing: border-box; 
 }
 
-.header h2 {
-    margin-top: 0;
-    font-size: 2em;
-}
-
-.footer {
-  background-color: LightGray;
-  padding: 10px;
-  text-align: center;
-  margin-top: 10px;
-}
-
-.navbar {
-  overflow: hidden; 
-  background-color: DarkGray;
-  margin-top: 10px;
-  display: flex;
-  justify-content: center; 
-}
-
-.navbar a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 20px;
-  text-decoration: none;
-  border: 1px solid Gray;
-  margin: 0 5px;
-  background-color: DimGray;
-  transition: background-color 0.3s;
-}
-
-.navbar a:hover {
-  background-color: LighterGray; 
-  color: black; 
-}
-
-
-.row::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.column {
-  float: left; 
-  width: 33.33%; 
-  padding: 20px;
-  min-height: 250px; 
-  text-align: left;
-  color: DarkGray; 
-  border-right: 1px solid LighterGray; 
-}
-
-.column:last-child {
-    border-right: none;
-}
-
-.custom-form {
-    max-width: 90%; 
-    margin: auto;
-}
-
-.form-group {
-    clear: both; 
-    margin-bottom: 10px;
-}
-
-.custom-form label {
+/* Định dạng cho các liên kết (Link) trong sidenav */
+.sidenav a {
+    /* Điều chỉnh padding để giống với ảnh: khoảng đệm trên/dưới lớn hơn */
+    padding: 15px 16px; 
+    text-decoration: none; 
+    font-size: 18px; 
+    color: #f1f1f1; /* Màu chữ trắng/sáng */
     display: block; 
-    float: left;
-    width: 80px;
-    text-align: right;
-    padding-right: 10px;
-    line-height: 28px; 
-    font-weight: bold;
+    transition: 0.3s;
 }
 
-.custom-form input[type="text"],
-.custom-form input[type="email"],
-.custom-form select {
-    width: calc(100% - 90px); 
-    padding: 5px;
-    border: 1px solid Silver;
-    border-radius: 4px;
-    display: block;
-    float: left;
+/* Hiệu ứng hover cho các liên kết */
+.sidenav a:hover {
+    color: #fff;
+    /* Có thể thêm background-color: #333; nếu muốn hiệu ứng hover màu nền */
 }
 
-.custom-form select {
-    width: 100px; 
+/* --- 3. Định dạng cho Khu vực Nội dung Chính (Content) --- */
+.content {
+    /* Đẩy nội dung chính sang phải bằng với chiều rộng của sidenav */
+    margin-left: 200px;
+    padding: 1px 20px; /* Khoảng đệm xung quanh nội dung */
 }
 
-.hobbies .checkbox-group {
-    display: block;
-    margin-left: 90px;
-    clear: both;
-}
-.hobbies .checkbox-group label {
-    float: none;
-    display: inline-block;
-    padding-right: 10px;
-    font-weight: normal;
-    width: auto;
-    line-height: normal;
+/* Định dạng cho tiêu đề và đoạn văn trong nội dung */
+.content h2 {
+    color: #333; 
+    font-size: 32px; /* Điều chỉnh kích thước tiêu đề */
+    margin-top: 40px; /* Khoảng cách từ đỉnh trang */
 }
 
-.button-group {
-    clear: both;
-    padding-left: 90px; 
-    margin-top: 20px;
-}
-.button-group button {
-    background-color: DimGray;
-    color: white; 
-    padding: 8px 15px;
-    margin-right: 10px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.reset-btn {
-    background-color: Gray; 
-}
-
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-    border-right: none; 
-    border-bottom: 1px solid LighterGray;
-  }
-  .navbar {
-      flex-direction: column;
-  }
-  .navbar a {
-    margin: 5px auto; 
-    width: 80%; 
-  }
-  .custom-form label {
-      width: 100%;
-      text-align: left;
-      padding-right: 0;
-  }
-  .custom-form input[type="text"],
-  .custom-form input[type="email"] {
-      width: 100%;
-  }
-  .button-group {
-      padding-left: 0;
-      text-align: center;
-  }
+.content p {
+    color: #555;
+    font-size: 16px;
 }
