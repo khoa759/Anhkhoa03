@@ -1,61 +1,54 @@
-/*
-   FILE: style.css
-   Mục đích: Tạo giao diện sidenav cố định (fixed) và full-height.
-*/
-
-/* --- 1. Thiết lập cơ bản --- */
 body {
-    margin: 0; /* Xóa margin mặc định */
     font-family: Arial, sans-serif;
-    line-height: 1.5; /* Điều chỉnh khoảng cách dòng */
+    margin: 0;
+    padding: 0;
+    background-color: light gray; 
+    color: #333;
 }
 
-/* --- 2. Định dạng cho Thanh Điều hướng Bên (Sidenav) --- */
-.sidenav {
-    height: 100%; /* Chiều cao đầy đủ của viewport */
-    width: 200px; /* Chiều rộng cố định */
-    position: fixed; /* Cố định vị trí, không cuộn theo trang */
-    z-index: 1; 
-    top: 0; 
-    left: 0; 
-    background-color: #000; /* Màu nền đen tuyệt đối */
-    overflow-x: hidden; 
-    padding-top: 20px; /* Khoảng đệm trên */
+.topnav {
+    overflow: hidden; 
+    background-color: #333;
+    padding: 10px 0;
+}
+
+.topnav a {
+    float: left;
+    color: white; 
+    text-align: center;
+    padding: 14px 16px; 
+    text-decoration: none; 
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #555;
+    color: white;
+}
+
+.content {
+    padding: 20px;
+    min-height: 400px; 
+    background-color: light gray;
+}
+
+.content h2 {
+    margin-top: 0; 
+    font-size: 30px;
+    color: #333;
+}
+
+.footer {
+    background-color: light gray;
+    color: slightly gray; 
+    text-align: left; 
+    padding: 10px 20px;
+    position: absolute; 
+    bottom: 0;
+    width: 100%;
     box-sizing: border-box; 
 }
 
-/* Định dạng cho các liên kết (Link) trong sidenav */
-.sidenav a {
-    /* Điều chỉnh padding để giống với ảnh: khoảng đệm trên/dưới lớn hơn */
-    padding: 15px 16px; 
-    text-decoration: none; 
-    font-size: 18px; 
-    color: #f1f1f1; /* Màu chữ trắng/sáng */
-    display: block; 
-    transition: 0.3s;
-}
-
-/* Hiệu ứng hover cho các liên kết */
-.sidenav a:hover {
-    color: #fff;
-    /* Có thể thêm background-color: #333; nếu muốn hiệu ứng hover màu nền */
-}
-
-/* --- 3. Định dạng cho Khu vực Nội dung Chính (Content) --- */
-.content {
-    /* Đẩy nội dung chính sang phải bằng với chiều rộng của sidenav */
-    margin-left: 200px;
-    padding: 1px 20px; /* Khoảng đệm xung quanh nội dung */
-}
-
-/* Định dạng cho tiêu đề và đoạn văn trong nội dung */
-.content h2 {
-    color: #333; 
-    font-size: 32px; /* Điều chỉnh kích thước tiêu đề */
-    margin-top: 40px; /* Khoảng cách từ đỉnh trang */
-}
-
-.content p {
-    color: #555;
-    font-size: 16px;
+.footer p {
+    margin: 5px 0;
 }
