@@ -1,71 +1,60 @@
-/* Thiết lập cơ bản */
+/* Thiết lập cơ bản cho toàn trang */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f0f0; /* Màu nền tổng thể, hơi nhạt */
-    color: #333;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f1f1f1;
 }
 
-/* Thanh điều hướng (Topnav) */
-.topnav {
-    overflow: hidden;
-    background-color: #333; /* Màu nền đen đậm */
-    color: white;
-    padding: 0; /* Loại bỏ padding để các link dính sát vào nhau */
-    display: flex; /* Dùng flexbox để căn chỉnh các link */
-    align-items: stretch;
+/* Căn giữa phần tiêu đề */
+.header {
+  text-align: center;
+  padding: 32px;
 }
 
-.topnav a {
-    float: left;
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px; /* Padding cho các link */
-    text-decoration: none;
-    font-size: 17px;
-    border-right: 1px solid #444; /* Thêm đường viền nhỏ nếu cần */
+.header h1 {
+  font-size: 40px;
 }
 
-/* Loại bỏ border cho link cuối cùng nếu muốn */
-.topnav a:last-child {
-    border-right: none;
+/* Container chứa các cột ảnh */
+.container {
+  display: flex;
+  flex-wrap: wrap; /* Cho phép các cột nhảy xuống dòng khi màn hình nhỏ */
+  padding: 0 4px;
 }
 
-.topnav a:hover {
-    background-color: #575757;
-    color: white;
+/* Thiết lập các cột */
+.column {
+  flex: 25%; /* Mặc định 4 cột trên màn hình lớn (100% / 4 = 25%) */
+  max-width: 25%;
+  padding: 0 4px;
 }
 
-/* Khu vực nội dung chính (Content) */
-.content {
-    /* Đảm bảo nội dung chiếm hết chiều rộng giữa topnav và footer */
-    min-height: calc(100vh - 51px - 40px); /* Ví dụ: 100vh trừ chiều cao topnav và footer */
-    background-color: #e0e0e0; /* Màu nền xám nhạt */
-    padding: 20px; /* Padding bên trong content */
-    border-bottom: 1px solid #ccc; /* Đường viền nhẹ ngăn cách với footer */
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  border-radius: 5px; /* Bo góc nhẹ cho ảnh đẹp hơn */
 }
 
-.content h1 {
-    font-size: 32px;
-    color: #333;
-    margin-top: 0;
-    margin-bottom: 10px;
+/* --- Responsive Layout --- */
+
+/* Màn hình trung bình (ví dụ: Tablet): Hiển thị 2 cột */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
 }
 
-.content p {
-    font-size: 16px;
-    color: #555;
-    margin-top: 0;
-}
-
-/* Khu vực chân trang (Footer) */
-.footer {
-    background-color: #cccccc; /* Màu nền xám nhạt hơn content một chút */
-    color: #333;
-    text-align: left; /* Căn lề trái theo hình */
-    padding: 10px 20px; /* Padding cho footer */
-    font-size: 14px;
-    border-top: 1px solid #bbb;
+/* Màn hình nhỏ (ví dụ: Điện thoại): Hiển thị 1 cột duy nhất */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
 }
