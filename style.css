@@ -1,24 +1,17 @@
-/* Container cha: Thanh màu xanh dương bao quanh */
+/* The parent container */
 .day {
-  display: flex;             /* Kích hoạt chế độ Flexbox */
-  background-color: DodgerBlue; /* Màu xanh dương giống trong ảnh */
-  padding: 10px;             /* Khoảng cách giữa viền xanh và các ô trắng */
+    display: flex;
+    background-color: #2196F3; /* Blue background */
+    padding: 10px;
 }
 
-/* Các item con: Các ô chứa thứ trong tuần */
+/* The flex items */
 .day > div {
-  background-color: #f1f1f1; /* Màu xám rất nhạt (gần như trắng) */
-  margin: 10px;              /* Khoảng cách giữa các ô */
-  padding: 20px;             /* Khoảng cách từ chữ đến viền ô */
-  font-size: 30px;           /* Kích thước chữ to rõ ràng */
-  text-align: center;        /* Căn chữ nằm giữa ô */
-  flex: 1;                   /* Giúp các ô tự động dàn đều chiều rộng */
-}
-
-/* Định dạng các đoạn văn bản bên dưới */
-p {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 18px;
-  line-height: 1.5;
-  margin-left: 10px;
+    background-color: #f1f1f1; /* Light grey background */
+    margin: 10px;
+    padding: 20px;
+    font-size: 25px;
+    flex: 1;                 /* Ensures items grow equally */
+    text-align: center;      /* Centers the text */
+    font-family: Arial, sans-serif;
 }
