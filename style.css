@@ -1,74 +1,66 @@
-body {
+/* Reset cơ bản */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: Arial, sans-serif;
-    background-color: #f1f1f1;
+}
+
+body {
     display: flex;
     justify-content: center;
-    padding: 20px;
+    align-items: center;
+    min-height: 100vh;
+    background-color: lightgray; /* Màu nền trang web: Xám nhạt */
 }
 
-.card {
-    background-color: white;
-    width: 100%;
-    max-width: 800px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+/* Khung bao ngoài */
+.container {
+    width: 700px;
+    height: 400px;
+    display: flex;
+    border: 1px solid black; /* Viền đen */
+    background-color: white; /* Nền trắng */
 }
 
-.card-img {
-    width: 100%;
-    display: block;
+/* Thanh menu bên trái */
+.sidebar {
+    width: 30%;
+    background-color: whitesmoke; /* Màu nền menu: Trắng khói */
+    border-right: 1px solid silver; /* Viền phải màu bạc */
 }
 
-.card-content {
-    padding: 16px;
+.sidebar ul {
+    list-style: none;
 }
 
-.card-title {
-    margin: 10px 0;
-    font-weight: bold;
+.sidebar li {
+    padding: 15px 20px;
+    color: black; /* Chữ mặc định màu đen */
+}
+
+/* Mục đang được chọn (Home) */
+.sidebar li.active {
+    background-color: gray; /* Nền mục active: Xám */
+    color: white;           /* Chữ mục active: Trắng */
+}
+
+/* Nội dung bên phải */
+.content {
+    width: 70%;
+    padding: 30px;
+    color: black; /* Màu chữ nội dung chính */
+}
+
+.content h1 {
     font-size: 24px;
-}
-
-.card-subtitle {
-    color: #555;
     margin-bottom: 20px;
 }
 
-.date {
-    color: #999;
+.content h3 {
+    margin-bottom: 15px;
 }
 
-.card-text {
-    line-height: 1.5;
-    color: #333;
-    margin-bottom: 30px;
-}
-
-.card-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.read-more-btn {
-    background-color: white;
-    border: 1px solid #ccc;
-    padding: 8px 16px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.read-more-btn:hover {
-    background-color: #ccc;
-}
-
-.comments {
-    font-weight: bold;
-}
-
-.comment-count {
-    background-color: black;
-    color: white;
-    padding: 2px 8px;
-    margin-left: 5px;
+.content ol {
+    margin-left: 40px;
 }
