@@ -1,4 +1,3 @@
-/* Reset cơ bản */
 * {
     margin: 0;
     padding: 0;
@@ -11,23 +10,21 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: lightgray; /* Màu nền trang web: Xám nhạt */
+    background-color: lightgray;
 }
 
-/* Khung bao ngoài */
 .container {
     width: 700px;
     height: 400px;
     display: flex;
-    border: 1px solid black; /* Viền đen */
-    background-color: white; /* Nền trắng */
+    border: 1px solid black;
+    background-color: white;
 }
 
-/* Thanh menu bên trái */
 .sidebar {
     width: 30%;
-    background-color: whitesmoke; /* Màu nền menu: Trắng khói */
-    border-right: 1px solid silver; /* Viền phải màu bạc */
+    background-color: whitesmoke;
+    border-right: 1px solid silver;
 }
 
 .sidebar ul {
@@ -36,20 +33,18 @@ body {
 
 .sidebar li {
     padding: 15px 20px;
-    color: black; /* Chữ mặc định màu đen */
+    color: black;
 }
 
-/* Mục đang được chọn (Home) */
 .sidebar li.active {
-    background-color: gray; /* Nền mục active: Xám */
-    color: white;           /* Chữ mục active: Trắng */
+    background-color: gray;
+    color: white;           
 }
 
-/* Nội dung bên phải */
 .content {
     width: 70%;
     padding: 30px;
-    color: black; /* Màu chữ nội dung chính */
+    color: black; 
 }
 
 .content h1 {
@@ -64,3 +59,4 @@ body {
 .content ol {
     margin-left: 40px;
 }
+
