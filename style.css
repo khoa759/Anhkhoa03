@@ -35,7 +35,7 @@ body {
 .sidebar li {
     padding: 20px;
     color: black;
-    border-bottom: 1px solid black; 
+    border-bottom: 1px solid gray; 
 }
 
 .sidebar li.active {
@@ -63,3 +63,4 @@ body {
     margin-left: 50px;
     line-height: 2; 
 }
+
